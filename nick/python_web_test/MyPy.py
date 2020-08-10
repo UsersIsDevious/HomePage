@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from browser import document
+from django import forms
 
 def Addition():
     data_1 = float(document["data_1"].value)
