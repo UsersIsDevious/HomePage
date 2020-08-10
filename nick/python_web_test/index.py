@@ -12,7 +12,7 @@ def addition(event):
 	data_out = document["AdditionResponse"]
 	data_1 = document["data_1"].value
 	data_2 = document["data_2"].value
-	if  data_1.isnumeric() && data_2.isnumeric():
+	if  data_1.isnumeric() and data_2.isnumeric():
 		data_out.text = str(data_1 + data_2)
 	else:
 		data_out.text = "数字として認識できないか数字以外が含まれています"
