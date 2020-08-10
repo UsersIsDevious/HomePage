@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+	        <link rel="stylesheet" href="css/style.css">
+	        <script src="static/brython.js"></script>
+	        <script src="static/brython_stdlib.js"></script>  
+		<title>Pythonをwebで動かすtest場</title>
+</head>
+<html>
+	<body onload="brython()">
+		<dir>
+			<script type="text/python" src="static/bmi.py"></script>
+			<h1>python_計算</h1>
+			<p>変数1<input type="text" id="data_1" />
+			<p>変数2<input type="text" id="data_2" />
+			<br><button id="Addition">計算</button>
+
+			<div id="result_Addition"></div>
+		</dir>
+	</body>
+</html>
