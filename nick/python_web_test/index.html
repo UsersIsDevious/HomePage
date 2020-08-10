@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <head>
+		<html lang="ja">
 	        <link rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" src="pystachio.js"></script> 
+		<title>{% page_title %} | {% site_title %}</title>
+		<link rel="stylesheet" href="style.css" />
 		<title>Pythonをwebで動かすtest場</title>
 </head>
-<html>
-	<body onload="brython()">
-		<dir>
-			<script type="text/python" src="MyPy.py"></script>
-			<h1>python_計算</h1>
-			<p>変数1<input type="text" id="data_1" />
-			<p>変数2<input type="text" id="data_2" />
-			<br><button id="Addition">計算</button>
-
-			<div id="result_Addition"></div>
-		</dir>
-	</body>
+<body>
+    <div id="header">
+        {% header %}
+    </div>
+    <div id="contents">
+        {% contents %}
+    </div>
+    <div id="sidebar">
+        {% sidebar %}
+    </div>
+    <div id="footer">
+        {% footer %}
+    </div>
+</body>
 </html>
