@@ -10,9 +10,12 @@ def echo(event):
 		rslt.text = document["zone"].value
 def addition(event):
 	data_out = document["AdditionResponse"]
-	data_1 = float(document["data_1"].value)
-	data_2 = float(document["data_2"].value)
-	data_out <= html.H1(str(data_1 + data_2))
+	data_1 = document["data_1"].value
+	data_2 = document["data_2"].value
+	if  data_1.isnumeric() && data_2.isnumeric():
+		data_out.text = str(data_1 + data_2)
+	else:
+		data_out.text = "数字として認識できないか数字以外が含まれています"
 
 document["mybutton"].bind("click", echo)
 document["AdditionOn"].bind("click", addition)
