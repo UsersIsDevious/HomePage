@@ -1,4 +1,4 @@
-from browser import document, alert,html
+from browser import document, alert,html,ajax
 
 def echo(event):
 	rslt = document["result"]
@@ -16,6 +16,9 @@ def addition(event):
 		data_out.text = str(int(data_1) + int(data_2))
 	else:
 		data_out.text = "数字として認識できないか数字以外が含まれています"
+def ajax_test():
+	alert(ajax.ajax().open("GET", "https://www.yahoo.co.jp", True).send().responseText)
 
 document["mybutton"].bind("click", echo)
 document["AdditionOn"].bind("click", addition)
+document["ajax_test"].bind("click", ajax_test)
